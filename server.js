@@ -8,4 +8,11 @@ app.get('/', (req, res) => {
     res.render('index', { name: 'Zamir' })
 })
 
+app.get('/users', (req, res) => {
+    res.send('Users List')
+})
+
+app.get('/users/new', (req, res) => {
+    res.send('New User Form')
+})
 app.listen(3000, () => console.log('Server running on port 3000'))
