@@ -12,6 +12,7 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+    console.log(req.body.firstName)
     res.send('Create a new User')
 })
 
