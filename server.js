@@ -3,9 +3,11 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => {
-    res.render('index', { name: 'Zamir' })
-})
+app.use(express.static('public'))
+
+// app.get('/', (req, res) => {
+//     res.render('index', { name: 'Zamir' })
+// })
 
 const userRouter = require('./routes/users')
 
