@@ -8,11 +8,7 @@ app.get('/', (req, res) => {
     res.render('index', { name: 'Zamir' })
 })
 
-app.get('/users', (req, res) => {
-    res.send('Users List')
-})
+const userRouter = require('./routes/users')
 
-app.get('/users/new', (req, res) => {
-    res.send('New User Form')
-})
+app.use('/users', userRouter)
 app.listen(3000, () => console.log('Server running on port 3000'))
