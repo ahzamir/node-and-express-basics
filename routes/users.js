@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-    res.render('users/new')
+    res.render('users/new', { firstName: "placeholder name"})
 })
 
 router.post('/', (req, res) => {
